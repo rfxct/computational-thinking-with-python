@@ -1,4 +1,3 @@
-
 valor1 = int(input('Digite o primeiro número: '))
 valor2 = int(input('Digite o segundo número: '))
 valor3 = int(input('Digite o terceiro número: '))
