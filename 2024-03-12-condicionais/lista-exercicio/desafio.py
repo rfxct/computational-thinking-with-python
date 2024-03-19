@@ -17,10 +17,10 @@ while True:
     if (velocidade > 150):
         multa += .4 * velocidade
     print(f'[Jeito 1] O valor da multa é de R${multa:.2f}')
-        
+
     # Jeito 2
     multa = 0
-    
+
     if velocidade > 100 and velocidade <= 120:
         multa = velocidade * .2
     elif velocidade > 120 and velocidade <= 150:
@@ -28,3 +28,17 @@ while True:
     elif velocidade > 150:
         multa = 120 * .2 + 150 * .3 + velocidade * .4
     print(f'[Jeito 2] O valor da multa é de R${multa:.2f}')
+
+    # Jeito 3 (Danilo)
+    multa = 0
+
+    if velocidade <= 100:
+        multa = 0
+    elif velocidade <= 120:
+        multa = velocidade * .2
+    elif velocidade <= 150:
+        multa = 120 * .2 + velocidade * .3
+    else:
+        multa = 120 * .2 + 150 * .3 + velocidade * .4
+    print(f'[Jeito 3] O valor da multa é de R${multa:.2f}')
+
