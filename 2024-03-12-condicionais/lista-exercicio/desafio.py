@@ -41,4 +41,3 @@ while True:
     else:
         multa = 120 * .2 + 150 * .3 + velocidade * .4
     print(f'[Jeito 3] O valor da multa é de R${multa:.2f}')
-
