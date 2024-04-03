@@ -10,5 +10,7 @@ while i < 5:
     i += 1
     soma += int(input(f'Forneça o {i}° número: '))
 
+media = soma / i
+
 print(f'A soma dos números é: {soma}')
-print(f'A média dos números é {soma / i}')
+print(f'A média dos números é {media}')

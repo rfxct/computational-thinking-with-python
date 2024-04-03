@@ -13,38 +13,25 @@ salario = 0
 sexo = ''
 estado_civil = ''
 
+while len(nome) <= 3:
+    nome = input('Digite seu nome (min. 4 letras): ')
+
+while idade <= 0 or idade >= 150:
+    idade = int(input('Digite sua idade (entre 0 e 150): '))
+
+while salario <= 0:
+    salario = float(input('Digite seu salário (maior que 0): '))
+
+while sexo != 'f' and sexo != 'm':
+    sexo = input('Digite seu sexo (f/m): ')
+
 while (
-        (len(nome) <= 3) or
-        (idade <= 0 or idade >= 150) or
-        (salario <= 0) or
-        not (sexo == 'f' or sexo == 'm') or
-        not (
-            estado_civil == 's' or
-            estado_civil == 'c' or
-            estado_civil == 'v' or
-            estado_civil == 'd'
-        )
+        estado_civil != 's' and
+        estado_civil != 'c' and
+        estado_civil != 'v' and
+        estado_civil != 'd'
 ):
-    if len(nome) <= 3:
-        nome = input('Digite seu nome (min. 4 letras): ')
-
-    if idade <= 0 or idade >= 150:
-        idade = int(input('Digite sua idade (entre 0 e 150): '))
-
-    if salario <= 0:
-        salario = float(input('Digite seu salário (maior que 0): '))
-
-    if sexo != 'f' and sexo != 'm':
-        sexo = input('Digite seu sexo (f/m): ')
-
-    if (
-            estado_civil != 's' and
-            estado_civil != 'c' and
-            estado_civil != 'v' and
-            estado_civil != 'd'
-    ):
-        estado_civil = input('Digite seu estado civil (s/c/v/d): ')
-
+    estado_civil = input('Digite seu estado civil (s/c/v/d): ')
 
 print('\nInformações validadas:\n',
       f'Nome: {nome}\n',
