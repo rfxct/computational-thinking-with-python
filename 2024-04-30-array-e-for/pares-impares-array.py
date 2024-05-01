@@ -10,4 +10,4 @@ for num in numeros:
     if num % 2:
         impares += 1
 
-print(f"Há {impares} números ÍMPARES e {10 - impares} números PARES")
+print(f"Há {impares} números ÍMPARES e {len(numeros) - impares} números PARES")
