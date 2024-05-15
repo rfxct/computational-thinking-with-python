@@ -7,10 +7,9 @@ def verificar_opcao(opcoes_validas, text, text_erro):
 
     if opcao_escolhida not in opcoes_validas:
         print(f'\n[ERRO] {text_erro}')
-        return verificar_opcao(opcoes_validas, text, text_erro)
+        opcao_escolhida = verificar_opcao(opcoes_validas, text, text_erro)
 
     return opcao_escolhida
-
 
 vinhos = ['Dom Bosco', 'Gato Negro', 'Pérgola', 'Cantinho do Vale']
 opcao = verificar_opcao(vinhos, 'Digite o nome de um vinho', 'O vinho fornecido é inválido')
