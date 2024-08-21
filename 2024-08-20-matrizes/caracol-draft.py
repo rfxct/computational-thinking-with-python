@@ -49,12 +49,16 @@ def caracol(altura):
     while (
         pl != ml or pc != mc
     ):
-        if pl > 0 and matriz[pl - 1][pc] == char_estrela:
-            matriz[pl][pc] = char_estrela
-        # if matriz[pl - 1] == char_estrela and len(matriz)
-        pl += 1
-        if pl == altura and :
-            break
+        matriz[pl][pc] = char_estrela
+
+        pl += -1 if pl == altura - 1 else 1
+
+        # if pl > 0 and matriz[pl - 1][pc] == char_estrela:
+        #     matriz[pl][pc] = char_estrela
+        # # if matriz[pl - 1] == char_estrela and len(matriz)
+        # pl += 1
+        # if pl == altura and :
+        #     break
 
     return matriz
 
