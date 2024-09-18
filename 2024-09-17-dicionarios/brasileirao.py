@@ -375,8 +375,7 @@ def rebaixados(dados):
     )
 
     classificacao = dados['fases']['2700']['classificacao']['grupo']['Único']
-    # Resposta está errada, são 4 rebaixados idx 16 até idx 19
-    return classificacao[int(min_rebaixamento) - 1 : int(max_rebaixamento) -1]
+    return classificacao[int(min_rebaixamento) - 1 : int(max_rebaixamento)]
 
 '''
 A proxima função recebe (alem do dicionario de dados do brasileirao) uma id de time
