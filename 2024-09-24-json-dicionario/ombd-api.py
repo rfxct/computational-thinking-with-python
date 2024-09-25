@@ -341,9 +341,13 @@ def baixar_poster(id_filme):
     url = "http://img.omdbapi.com/?apikey={0}&i={1}".format(api_key, id_filme)
     retorno = requests.get(url)
 
+    if retorno.status_code == 404:
+        return 'id invalida'
+
     arquivo = open("Poster.jpg", "wb")
     arquivo.write(retorno.content)
     arquivo.close()
+    return 'id valida'
 
 '''
 'tt0796366' é a id de star trek.
